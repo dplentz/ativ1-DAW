@@ -1,14 +1,16 @@
 async function add(req,res)
 {
-
+    res.render("usuario/listar.ejs",req.body);
+    console.log(req.body);
 }
 async function abreAdd(req,res)
 {
-
+    res.render("usuario/add.ejs", {});
 }
 async function listar(req,res)
 {
-
+    
+   // res.render("usuario/listar.ejs", {});
 }
 async function listarFiltro(req,res)
 {
