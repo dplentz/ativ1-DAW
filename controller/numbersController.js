@@ -1,4 +1,4 @@
-async function add(req,res)
+async function result(req,res)
 {   
     var oper = req.body.operacao;
     var result;
@@ -22,32 +22,11 @@ async function add(req,res)
             break;
     }
     msg = result;
-    res.render("listar.ejs",req.body);
+    res.render("result.ejs",req.body);
 }
-async function abreAdd(req,res)
+async function add(req,res)
 {
     res.render("add.ejs", {});
 }
-async function listar(req,res)
-{
-    
-   // res.render("usuario/listar.ejs", {});
-}
-async function listarFiltro(req,res)
-{
 
-}
-async function abreEdt(req,res)
-{
-
-}
-async function edt(req,res)
-{
-
-}
-async function del(req,res)
-{
-
-}
-
-module.exports = {add,abreAdd,listar,listarFiltro,abreEdt,edt,del}
+module.exports = {add,result};
